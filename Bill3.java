@@ -8,12 +8,8 @@ public class Bill3 {
 
 		double totalBill = Double.parseDouble(args[3]);
 		float totalBillfloat = (float) Math.ceil(totalBill);
-		float share = totalBillfloat/3;
+		double share = Math.ceil(totalBillfloat/3);
 
-		System.out.println(name1 + "'s share: $" + share);
-        System.out.println(name2 + "'s share: $" + share);
-        System.out.println(name3 + "'s share: $" + share);
-
-		System.out.println("Total bill: $" + totalBill);
+		System.out.println("Dear " + name3 + ", " + name2 + ", and " + name1 + ": pay " + share + " Shekels each.");
 	}
 }

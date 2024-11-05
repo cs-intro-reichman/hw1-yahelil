@@ -9,9 +9,28 @@ public class TimeFormat {
 		// It concatenates the empty string "" with the leftmost hour-digit. 
 		// It then concatenates the resulting string with the rightmost hour-digit,
 		// and then uses parseInt to cast the resulting string as an int.
-		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
+		String am_pm = "AM";
+		String hours = "" + args[0].charAt(0) + args[0].charAt(1);
+		int hours_int = Integer.parseInt(hours);
 		// Does the same with the minutes part of the input.
-		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
+		String minutes = "" + args[0].charAt(3) + args[0].charAt(4);
+		int length = minutes.length();
+		if (length == 1){
+			minutes = '0' + minutes;
+		}
+		length = hours.length();
+		if (length == 1){
+			hours = '0' + hours;
+		}
+		if (hours_int > 12){
+			hours_int -= 12;
+			am_pm = "PM";
+		}
+		
+		System.out.print(hours_int);
+		System.out.print(':');
+		System.out.print(minutes);
+		System.out.println(am_pm);
+
 	}
 }
