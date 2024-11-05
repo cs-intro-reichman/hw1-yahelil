@@ -23,8 +23,10 @@ public class TimeFormat {
 			hours = '0' + hours;
 		}
 		if (hours_int > 11){
-			hours_int -= 12;
 			am_pm = "PM";
+		}
+		if (hours_int > 12){
+			hours_int -= 12;
 		}
 		
 		System.out.print(hours_int);
