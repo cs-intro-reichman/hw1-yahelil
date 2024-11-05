@@ -30,7 +30,7 @@ public class TimeFormat {
 		System.out.print(hours_int);
 		System.out.print(':');
 		System.out.print(minutes);
-		System.out.println(am_pm);
+		System.out.println(' ' +am_pm);
 
 	}
 }

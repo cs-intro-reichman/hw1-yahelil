@@ -7,6 +7,6 @@ public class FVCalc {
 
 		double future_value = (current_value * Math.pow(1+intrest_rate, years));
 
-		System.out.println("After " + years + " years, $" + current_value + " saved at " + intrest_rate*100 +"% will yeid $" +(int)future_value);
+		System.out.println("After " + years + " years, a $" + current_value + " saved at " + intrest_rate*100 +"% will yeid $" +(int)future_value);
 	}
 }
