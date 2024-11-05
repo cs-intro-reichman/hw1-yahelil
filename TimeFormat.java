@@ -22,7 +22,7 @@ public class TimeFormat {
 		if (length == 1){
 			hours = '0' + hours;
 		}
-		if (hours_int > 12){
+		if (hours_int > 11){
 			hours_int -= 12;
 			am_pm = "PM";
 		}
